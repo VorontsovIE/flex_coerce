@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["prijutme4ty@gmail.com"]
   spec.description   = %q{FlexCoerce - is a gem which allow you create operator-dependent coercion logic. It's useful when your type should be treated in a different way for different binary operations (including arithmetic operators, bitwise operators and comparison operators except equality checks: `==`, `===`).}
   spec.summary       = %q{FlexCoerce - is a gem which allow you create operator-dependent coercion logic. It's useful when your type should be treated in a different way for different binary operations (including arithmetic operators, bitwise operators and comparison operators except equality checks: `==`, `===`).}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/prijutme4ty/flex_coerce"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
