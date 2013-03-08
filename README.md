@@ -58,7 +58,8 @@ end
 5 + Unit.new(3,'cm') #  ==>  raises an Error
 ```
 
-All the magic is in `prepend FlexCoerce` call. It decorates your coerce method with another one, which follow ruby conventions about coerce method. This is done by creating an instance of `CoerceableWrapper` class which takes a reference to left-side object. This intermediate class defines its own methods for binary operators such that they play well with `#coerce` method of right-side object class. I should mention that this method works good for missing, optional or required second argument of `#coerce`, you can find examples in specs.
+You define your own `#coerce` with two arguments: standard argument `other` and new argument `meth` which represents the binary operations caused coercion. All the magic is in `prepend FlexCoerce` call.
+It decorates your `#coerce` method with another one, which follow ruby conventions about coerce method. This is done by creating an instance of `CoerceableWrapper` class which takes a reference to left-side object. This intermediate class defines its own methods for binary operators such that they play well with `#coerce` method of right-side object class. I should mention that this method works good for missing, optional or required second argument of `#coerce`, you can find examples in specs.
 
 Possibly this example is too simplistic and can be made in another and more consistent way. But this is a proof of concept that coerce can be made method-specific without touching base ruby classes. You're welcome with more interesting examples and more powerful and clear design.
 
